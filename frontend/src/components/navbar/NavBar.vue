@@ -18,8 +18,8 @@ import SearchIcon from "@/components/navbar/icons/SearchIcon.vue";
           </label>
           <div class="px-2 font-bold text-xl">AiFriends</div>
         </div>
-        <div class="navbar-center w-4/5 max-w-180 flex justify-center">
-          <div class="join w-4/5 flex justify-center">
+        <div class="navbar-center w-4/5 max-w-170">
+          <div class="join w-4/5">
             <input class="input join-item rounded-l-full w-4/5" placeholder="搜索你感兴趣的内容" />
             <button class="btn join-item rounded-r-full gap-0">
               <SearchIcon />
@@ -28,7 +28,9 @@ import SearchIcon from "@/components/navbar/icons/SearchIcon.vue";
           </div>
         </div>
         <div class="navbar-end">
-          <button class="btn btn-ghost text-lg">登录</button>
+          <RouterLink :to="{name:'user-account-login-index'}" active-class="btn-active" class="btn btn-ghost text-lg">
+            登录
+          </RouterLink>
         </div>
       </nav>
       <slot></slot>
@@ -37,26 +39,24 @@ import SearchIcon from "@/components/navbar/icons/SearchIcon.vue";
     <div class="drawer-side is-drawer-close:overflow-visible">
       <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
       <div class="flex min-h-full flex-col items-start bg-base-200 is-drawer-close:w-16 is-drawer-open:w-54">
-        <!-- Sidebar content here -->
         <ul class="menu w-full grow">
-          <!-- List item -->
           <li>
-            <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right py-3">
+            <RouterLink :to="{name:'homepage-index'}" active-class="menu-focus" class="menu-focus is-drawer-close:tooltip is-drawer-close:tooltip-right py-3">
               <HomepageIcon />
               <span class="is-drawer-close:hidden text-base ml-2 whitespace-nowrap">首页</span>
-            </button>
+            </RouterLink>
           </li>
           <li>
-            <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right py-3">
+            <RouterLink :to="{name:'friend-index'}" active-class="menu-focus" class="is-drawer-close:tooltip is-drawer-close:tooltip-right py-3">
               <FriendIcon />
               <span class="is-drawer-close:hidden text-base ml-2 whitespace-nowrap">好友</span>
-            </button>
+            </RouterLink>
           </li>
           <li>
-            <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right py-3">
+            <RouterLink :to="{name:'create-index'}" active-class="menu-focus" class="is-drawer-close:tooltip is-drawer-close:tooltip-right py-3">
               <CreateIcon />
               <span class="is-drawer-close:hidden text-base ml-2 whitespace-nowrap">创作</span>
-            </button>
+            </RouterLink>
           </li>
         </ul>
       </div>
