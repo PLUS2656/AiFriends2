@@ -41,19 +41,19 @@ import SearchIcon from "@/components/navbar/icons/SearchIcon.vue";
       <div class="flex min-h-full flex-col items-start bg-base-200 is-drawer-close:w-16 is-drawer-open:w-54">
         <ul class="menu w-full grow">
           <li>
-            <RouterLink :to="{name:'homepage-index'}" active-class="menu-focus" class="menu-focus is-drawer-close:tooltip is-drawer-close:tooltip-right py-3">
+            <RouterLink :to="{name:'homepage-index'}" active-class="menu-focus" class="menu-focus is-drawer-close:tooltip is-drawer-close:tooltip-right py-3" data-tip="首页">
               <HomepageIcon />
               <span class="is-drawer-close:hidden text-base ml-2 whitespace-nowrap">首页</span>
             </RouterLink>
           </li>
           <li>
-            <RouterLink :to="{name:'friend-index'}" active-class="menu-focus" class="is-drawer-close:tooltip is-drawer-close:tooltip-right py-3">
+            <RouterLink :to="{name:'friend-index'}" active-class="menu-focus" class="is-drawer-close:tooltip is-drawer-close:tooltip-right py-3" data-tip="好友">
               <FriendIcon />
               <span class="is-drawer-close:hidden text-base ml-2 whitespace-nowrap">好友</span>
             </RouterLink>
           </li>
           <li>
-            <RouterLink :to="{name:'create-index'}" active-class="menu-focus" class="is-drawer-close:tooltip is-drawer-close:tooltip-right py-3">
+            <RouterLink :to="{name:'create-index'}" active-class="menu-focus" class="is-drawer-close:tooltip is-drawer-close:tooltip-right py-3" data-tip="创作">
               <CreateIcon />
               <span class="is-drawer-close:hidden text-base ml-2 whitespace-nowrap">创作</span>
             </RouterLink>

@@ -40,7 +40,7 @@ const router = createRouter({
     {
       path:'/user/account/register',
       component:RegisterIndex,
-      name:'user-account-register-index-index',
+      name:'user-account-register-index',
     },
     {
       path:'/user/space/:user_id',
