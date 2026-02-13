@@ -16,7 +16,7 @@ import SearchIcon from "@/components/navbar/icons/SearchIcon.vue";
           <label for="my-drawer-4" aria-label="open sidebar" class="btn btn-square btn-ghost">
             <MenuIcon />
           </label>
-          <div class="px-2 font-bold text-xl">AiFriends</div>
+          <div class="px-2 font-bold text-xl">Tiantian AiFriend</div>
         </div>
         <div class="navbar-center w-4/5 max-w-170">
           <div class="join w-4/5">
