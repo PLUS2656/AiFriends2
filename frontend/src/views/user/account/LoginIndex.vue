@@ -1,6 +1,6 @@
 <script setup>
 import {ref} from "vue";
-import {useUserStore} from "@/stores/user.js";
+import {useUserstore} from "@/stores/user.js";
 import {useRouter} from "vue-router";
 import api from "@/js/http/api.js";
 
@@ -8,7 +8,7 @@ const username = ref('')
 const password = ref('')
 const errorMessage = ref('')
 
-const user = useUserStore()
+const user = useUserstore()
 const router = useRouter()
 
 async function handleLogin() {

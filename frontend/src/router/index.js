@@ -18,7 +18,7 @@ const router = createRouter({
       name:'homepage-index',
     },
     {
-      path:'/friend',
+      path:'/friend/',
       component:FriendIndex,
       name:'friend-index',
     },
@@ -38,12 +38,12 @@ const router = createRouter({
       name:'user-account-login-index',
     },
     {
-      path:'/user/account/register',
+      path:'/user/account/register/',
       component:RegisterIndex,
       name:'user-account-register-index',
     },
     {
-      path:'/user/space/:user_id',
+      path:'/user/space/:user_id/',
       component:SpaceIndex,
       name:'user-space-index',
     },
