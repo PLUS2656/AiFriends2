@@ -1,18 +1,19 @@
 import {defineStore} from "pinia";
 import {ref} from "vue";
 
-export const useUserstore = defineStore('user',()=>{
-    const id = ref(1)
-    const username = ref('PLUS')
-    const photo = ref('http://127.0.0.1:8000/media/user/photos/1_4f873a9454.png')
-    const profile = ref('111')
-    const accessToken = ref('111')
+export const useUserStore = defineStore('user', () => {
+    const id = ref(0)
+    const username = ref('')
+    const photo = ref('')
+    const profile = ref('')
+    const accessToken = ref('')
+    const hasPulledUserInfo = ref(false)
 
-    function isLogin(){
-        return !!accessToken.value //双叹号用来判断该值是否为空,必须带 value
+    function isLogin() {
+        return !!accessToken.value  // 必须带value!!!!!!!!!
     }
 
-    function setAccessToken(token){
+    function setAccessToken(token) {
         accessToken.value = token
     }
 
@@ -20,15 +21,19 @@ export const useUserstore = defineStore('user',()=>{
         id.value = data.user_id
         username.value = data.username
         photo.value = data.photo
-        profile.value = data.Profile
+        profile.value = data.profile
     }
 
-    function logout(){
-        id.value=0
-        username.value=''
-        photo.value=''
-        profile.value=''
-        accessToken.value=''
+    function logout() {
+        id.value = 0
+        username.value = ''
+        photo.value = ''
+        profile.value = ''
+        accessToken.value = ''
+    }
+
+    function setHasPulledUserInfo(newStatus) {
+        hasPulledUserInfo.value = newStatus
     }
 
     return {
@@ -36,10 +41,12 @@ export const useUserstore = defineStore('user',()=>{
         username,
         photo,
         profile,
-        accessToken,
+        accessToken,  // 千万不要忘了！！！！
         isLogin,
         setAccessToken,
         setUserInfo,
-        logout
+        logout,
+        hasPulledUserInfo,
+        setHasPulledUserInfo,
     }
 })
