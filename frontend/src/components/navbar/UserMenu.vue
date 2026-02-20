@@ -1,10 +1,10 @@
 <script setup>
-import {useUserstore} from "@/stores/user.js";
+import {useUserStore} from "@/stores/user.js";
 import UserSpaceIndex from "@/components/navbar/icons/UserSpaceIndex.vue";
 import UserProfileIcon from "@/components/navbar/icons/UserProfileIcon.vue";
 import UserLogoutIcon from "@/components/navbar/icons/UserLogoutIcon.vue";
 
-const user = useUserstore()
+const user = useUserStore()
 
 function closeMenu(){
   const element=document.activeElement
