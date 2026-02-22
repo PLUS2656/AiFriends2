@@ -7,7 +7,7 @@ export const useUserStore = defineStore('user', () => {
     const photo = ref('')
     const profile = ref('')
     const accessToken = ref('')
-    const hasPulledUserInfo = ref()
+    const hasPulledUserInfo = ref(false)
 
     function isLogin() {
         return !!accessToken.value  // 必须带value!!!!!!!!!
@@ -20,7 +20,7 @@ export const useUserStore = defineStore('user', () => {
     function setUserInfo(data) {
         id.value = data.user_id
         username.value = data.username
-        photo.value = data.photo
+        photo.value = data.photos
         profile.value = data.profile
     }
 

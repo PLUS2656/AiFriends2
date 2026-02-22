@@ -25,6 +25,7 @@ function closeMenu(){
           <div class="avatar">
             <div class="w-10 rounded-full">
               <img :src="user.photo" alt="">
+<!--              <div style="background-image: url('http://127.0.0.1:8000/media/user/photos/default.png');width:100%;height: 100%;"></div>-->
             </div>
           </div>
           <span class="text-base font-bold line-clamp-1">{{ user.username }}</span>
