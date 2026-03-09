@@ -27,7 +27,7 @@ class RegisterView(APIView):
                 'access': str(refresh.access_token),
                 'user_id': user.id,
                 'username': user.username,
-                'photos': user_profile.photo.url,
+                'photo': user_profile.photo.url,
                 'profile': user_profile.profile,
             })
             response.set_cookie(
