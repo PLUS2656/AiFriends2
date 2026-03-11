@@ -49,4 +49,9 @@ export const useUserStore = defineStore('user', () => {
         hasPulledUserInfo,
         setHasPulledUserInfo,
     }
-})
+},
+  {
+    persist: true,
+  },
+
+    )
